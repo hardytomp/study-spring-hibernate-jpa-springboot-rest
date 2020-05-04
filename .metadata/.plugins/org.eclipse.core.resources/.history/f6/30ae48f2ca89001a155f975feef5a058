@@ -1,0 +1,33 @@
+package com.hardy.springdemo.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hardy.springdemo.entity.Student;
+
+@RestController
+@RequestMapping("/api")
+public class StudentRestController {
+
+	private List<Student> students;
+	
+	@PostConstruct
+	public void loadData(){
+		students = new ArrayList<Student>();
+		students.add(new Student("Hardy","Tom"));
+		students.add(new Student("Amalu","Laji"));
+		students.add(new Student("Hardy","Amalu"));
+	}
+	
+	@GetMapping("/students")
+	public List<Student> getStudents() {
+		return students;
+	}
+	
+}

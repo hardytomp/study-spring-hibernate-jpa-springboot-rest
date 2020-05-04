@@ -1,0 +1,5 @@
+package com.hardy.springdemo.rest;
+
+public class StudentErrorResponse {
+
+}

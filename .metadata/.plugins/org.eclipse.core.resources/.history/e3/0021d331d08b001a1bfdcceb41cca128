@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>Thyme leaf Demo</title>
+	</head>
+	<body>
+		hello
+	
+	</body>
+
+</html>

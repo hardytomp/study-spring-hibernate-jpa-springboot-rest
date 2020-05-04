@@ -1,0 +1,46 @@
+package com.hardy.springbootdemo.cruddemo.service;
+
+import java.util.List;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hardy.springbootdemo.cruddemo.dao.EmployeeDAO;
+import com.hardy.springbootdemo.cruddemo.entity.Employee;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	private EmployeeDAO employeeDAO;
+	
+	@Autowired
+	public EmployeeServiceImpl(EmployeeDAO employeeDAO) {
+		this.employeeDAO = employeeDAO;
+	}
+
+	@Transactional
+	public List<Employee> findAllEmployee() {
+		return employeeDAO.findAllEmployee();
+	}
+
+	@Transactional
+	public Employee findById(int id) {
+		return employeeDAO.findById(id);
+	}
+
+	@Transactional
+	public void save(Employee emp) {
+		employeeDAO.save(emp);
+		
+	}
+
+	@Transactional
+	public void deleteById(int id) {
+		employeeDAO.deleteById(id);
+		
+	}
+
+}

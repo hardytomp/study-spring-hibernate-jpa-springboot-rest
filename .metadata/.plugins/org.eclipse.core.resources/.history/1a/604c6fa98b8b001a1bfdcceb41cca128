@@ -1,0 +1,30 @@
+package com.hardy.springbootdemo.cruddemo.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.stereotype.Repository;
+
+import com.hardy.springbootdemo.cruddemo.entity.Employee;
+
+
+@Repository
+public class EmployeeDAOHibernateImpl implements EmployeeDAO{
+	
+	//define field fr entity manager
+	
+	private EntityManager entityManager;
+	
+	public EmployeeDAOHibernateImpl(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+	
+
+	@Override
+	public List<Employee> findAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

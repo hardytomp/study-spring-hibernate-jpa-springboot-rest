@@ -1,0 +1,66 @@
+package com.hardy.springbootdemo.cruddemo.rest;
+
+import java.util.List;
+
+import javax.management.RuntimeErrorException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hardy.springbootdemo.cruddemo.dao.EmployeeDAO;
+import com.hardy.springbootdemo.cruddemo.entity.Employee;
+import com.hardy.springbootdemo.cruddemo.service.EmployeeService;
+
+@RestController
+@RequestMapping("/api")
+public class EmployeeRestController {
+
+	
+	private EmployeeService employeeSvc;
+	
+	@Autowired
+	public EmployeeRestController(EmployeeService employeeSvc) {
+		this.employeeSvc = employeeSvc;
+	}
+	
+	
+	@GetMapping("/employees")
+	public List<Employee> findAllEmployees() {
+		return employeeSvc.findAllEmployee();
+	}
+	
+	@GetMapping("/employees/{employeeId}")
+	public Employee findById(@PathVariable int employeeId) {
+		Employee emp =  employeeSvc.findById(employeeId);
+		if(emp == null) {
+			throw new RuntimeException("Employee not found"+employeeId);
+		}
+		
+		return emp;
+	}
+	@PostMapping("/employees")
+	public Employee addEmployee(@RequestBody Employee emp){
+		emp.setId(0);
+		employeeSvc.save(emp);
+		return emp;
+	}
+
+	@PutMapping("/employees")
+	public Employee updateEmployee(@RequestBody Employee emp){
+		employeeSvc.save(emp);
+		return emp;
+	}	
+	
+	
+	public void deleteById(int id){
+		
+	}
+	
+}

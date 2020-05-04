@@ -1,0 +1,5 @@
+package com.hardy.springbootdemo.springbootdemoapp.rest;
+
+public class FunRestController {
+
+}

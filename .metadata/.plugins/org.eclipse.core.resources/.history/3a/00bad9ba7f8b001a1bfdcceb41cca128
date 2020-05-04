@@ -1,0 +1,16 @@
+info.app.name=Actuator demo
+info.app.description=Sample app boys!
+info.app.version=1.0.0
+
+#use * expose all end points
+
+management.endpoints.web.exposure.include=*
+
+#exclude individual endpoints
+#management.endpoints.web.exposure.exclude=health,info
+
+#define my custom properties
+
+coach.name=Wenger
+team.name=Arsenal
+ 

@@ -1,0 +1,16 @@
+127.0.0.1 - - [20/Apr/2020:11:38:44 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:11:38:45 +0530] "GET /web-customer-tracker/ HTTP/1.1" 404 734
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:11:39:57 +0530] "GET /web-customer-tracker/TestDbServlet HTTP/1.1" 200 121
+127.0.0.1 - - [20/Apr/2020:12:34:39 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:34:40 +0530] "GET /web-customer-tracker/ HTTP/1.1" 500 9647
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:34:49 +0530] "GET /web-customer-tracker/customer/list HTTP/1.1" 500 9647
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:34:52 +0530] "GET /web-customer-tracker/customer/list HTTP/1.1" 500 9647
+127.0.0.1 - - [20/Apr/2020:12:36:02 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:36:03 +0530] "GET /web-customer-tracker/ HTTP/1.1" 500 9647
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:36:54 +0530] "GET /web-customer-tracker//customer/list HTTP/1.1" 500 9647
+127.0.0.1 - - [20/Apr/2020:12:39:44 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:39:45 +0530] "GET /web-customer-tracker/ HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:12:39:53 +0530] "GET /web-customer-tracker/customer/list HTTP/1.1" 200 147
+127.0.0.1 - - [20/Apr/2020:17:49:19 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:17:49:20 +0530] "GET /web-customer-tracker/ HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [20/Apr/2020:17:49:30 +0530] "GET /web-customer-tracker/customer/list HTTP/1.1" 200 1156

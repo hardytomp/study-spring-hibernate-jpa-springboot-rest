@@ -1,0 +1,5 @@
+package com.hardy.springbootdemo.cruddemo.service;
+
+public interface EmployeeService {
+
+}

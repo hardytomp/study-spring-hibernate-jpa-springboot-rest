@@ -1,0 +1,31 @@
+package com.hardy.jackson.json.demo;
+
+import java.io.File;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		try {
+			
+			//crate obj mapper
+			ObjectMapper mapper = new ObjectMapper();
+			//read JSON file map/convert to POJO
+			Student newStudent = mapper.readValue(new File("data/sample-full.json"), Student.class);
+			
+			//print data
+			System.out.println("First name "+newStudent.getFirstName());
+			System.out.println("First name "+newStudent.getLastName());
+			
+			Address tempAddr = newStudent.getAddress();
+			System.out.println(tempAddr);
+			System.out.println(tempAddr.getCountry();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

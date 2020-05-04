@@ -1,0 +1,7 @@
+info.app.name=Actuator demo
+info.app.description=Sample app boys!
+info.app.version=1.0.0
+
+#use * expose all end points
+
+management.endpoints.web.exposure.include=*

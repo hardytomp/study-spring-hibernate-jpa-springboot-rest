@@ -1,0 +1,6 @@
+package com.hardy.springbootdemo.thymeleafdemo;
+
+public class Snippet {
+	<p th:text="'Time on the server is ' + ${theDate}" />
+}
+

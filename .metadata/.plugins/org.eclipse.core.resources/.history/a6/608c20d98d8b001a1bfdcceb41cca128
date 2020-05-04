@@ -1,0 +1,11 @@
+package com.hardy.springbootdemo.cruddemo.dao;
+
+import java.util.List;
+
+import com.hardy.springbootdemo.cruddemo.entity.Employee;
+
+public interface EmployeeDAO {
+
+	
+	public List<Employee> findAllEmployee();
+}
